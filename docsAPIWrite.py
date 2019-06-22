@@ -33,8 +33,7 @@ def writeToDoc():
     """
     Uses the Google Docs API to send write requests to the doc.
     Must use the 'BatchUpdate' method to send list of requests and return the results
-    :param document: the Google Doc being written to
-    :return :
+    :return result: the result list from the 'batchUpdate' method
     """
     # give the list of requests
     requests = [
@@ -49,9 +48,5 @@ def writeToDoc():
     ]
     credentials = getCredentials()
     service = build('docs', 'v1', credentials=credentials)
-    # Retrieve the documents contents from the Docs service.
-    document = service.documents().get(documentId=DOCUMENT_ID_QUERY).execute()
-    result = service.documents().batchUpdate(documentId=DOCUMENT_ID_QUERY, body=
-    {'requests': requests}).execute()
+    result = service.documents().batchUpdate(documentId=DOCUMENT_ID_QUERY, body={'requests': requests}).execute()
     return result
-
