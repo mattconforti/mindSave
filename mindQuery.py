@@ -48,7 +48,7 @@ def main():
             print('Search results:\n')
             print(PATTERN_MATCH_DICT)
             dataToWrite = getWriteData(PATTERN_MATCH_DICT)  # get the data to write out (output)
-            writeResults = writeToDoc()
+            writeResults = writeToDoc(len(dataToWrite[0]), dataToWrite[0])
             print(writeResults)
     print('\n*****************************')
 
