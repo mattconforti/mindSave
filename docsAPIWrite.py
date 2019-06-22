@@ -6,21 +6,9 @@ By: Matt Conforti (with code from https://developers.google.com/docs/api/quickst
 
 
 # imports -------
-from docsAPIConnect import DOCUMENT_ID
-from docsAPIConnect import getCredentials
-
-from mindQuery import PATTERN_MATCH_DICT
-
-from googleapiclient.discovery import build
 
 
 # functions -------
-def main():
-    credentials = getCredentials()
-    service = build('docs', 'v1', credentials=credentials)
-    document = service.documents().get(documentId=DOCUMENT_ID).execute()
-    print()
-
 
 def getWriteData(dataDict):
     """
@@ -30,13 +18,11 @@ def getWriteData(dataDict):
     :return returnString: the response to write out as a result of
     seeing which question was asked and what the answer is (parsing PATTERN_MATCH_DICT)
     """
-    pass
+    # update this to form a more natural response, not just return the original thought
+    dictVals = dataDict.values()
+    return dictVals
 
 
 def writeToDoc(document):
     pass
 
-
-# main code -------
-if __name__ == '__main__':
-    main()
