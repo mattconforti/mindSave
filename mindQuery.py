@@ -13,6 +13,7 @@ from mindSaveDb import getData
 from mindSaveDb import createConnection
 
 from docsAPIWrite import getWriteData
+from docsAPIWrite import writeToDoc
 
 # global vars -----------------------------
 DOCUMENT_ID_QUERY = '1MdJ4btEMOOOeLpcWT3-Vah826EnutaoodvHlJvISXpI'
@@ -47,6 +48,8 @@ def main():
             print('Search results:\n')
             print(PATTERN_MATCH_DICT)
             dataToWrite = getWriteData(PATTERN_MATCH_DICT)  # get the data to write out (output)
+            writeResults = writeToDoc()
+            print(writeResults)
     print('\n*****************************')
 
 

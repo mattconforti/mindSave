@@ -14,7 +14,7 @@ from google.auth.transport.requests import Request
 
 # global vars -----------------------------
 # If modifying these authorization scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
+SCOPES = ['https://www.googleapis.com/auth/documents']
 
 # The ID of the google doc.
 DOCUMENT_ID = '1-UuXZI-n0p9bA_IZQlIqeQfMKlljudfuhzk_ha_APF8'

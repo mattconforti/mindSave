@@ -6,10 +6,16 @@ By: Matt Conforti (with code from https://developers.google.com/docs/api/quickst
 
 
 # imports -------
+from docsAPIConnect import getCredentials
+
+from googleapiclient.discovery import build
+
+
+# global vars
+DOCUMENT_ID_QUERY = '1MdJ4btEMOOOeLpcWT3-Vah826EnutaoodvHlJvISXpI'
 
 
 # functions -------
-
 def getWriteData(dataDict):
     """
     Gets the data to write to the Google Doc by parsing the PATTERN_MATCH_DICT
@@ -23,6 +29,29 @@ def getWriteData(dataDict):
     return dictVals
 
 
-def writeToDoc(document):
-    pass
+def writeToDoc():
+    """
+    Uses the Google Docs API to send write requests to the doc.
+    Must use the 'BatchUpdate' method to send list of requests and return the results
+    :param document: the Google Doc being written to
+    :return :
+    """
+    # give the list of requests
+    requests = [
+        {
+            'insertText': {
+                'location': {
+                    'index': 25,
+                 },
+                'text': 'hello'
+            }
+        },
+    ]
+    credentials = getCredentials()
+    service = build('docs', 'v1', credentials=credentials)
+    # Retrieve the documents contents from the Docs service.
+    document = service.documents().get(documentId=DOCUMENT_ID_QUERY).execute()
+    result = service.documents().batchUpdate(documentId=DOCUMENT_ID_QUERY, body=
+    {'requests': requests}).execute()
+    return result
 
