@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c36078f2-f76f-41a0-91e0-ee2bc31c9948" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsAPIWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/docsAPIWrite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mindQuery.py" beforeDir="false" afterPath="$PROJECT_DIR$/mindQuery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/token.pickle" afterDir="false" />
-    </list>
+    <list default="true" id="c36078f2-f76f-41a0-91e0-ee2bc31c9948" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +25,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mindQuery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
+            <state relative-caret-position="531">
               <caret line="48" column="96" lean-forward="true" selection-start-line="48" selection-start-column="96" selection-end-line="48" selection-end-column="96" />
               <folding>
                 <element signature="e#173#186#0" expanded="true" />
@@ -79,8 +73,8 @@
         <option value="$PROJECT_DIR$/docsAPIConnect.py" />
         <option value="$PROJECT_DIR$/../NBAclass.py" />
         <option value="$PROJECT_DIR$/mindSaveDb.py" />
-        <option value="$PROJECT_DIR$/mindQuery.py" />
         <option value="$PROJECT_DIR$/docsAPIWrite.py" />
+        <option value="$PROJECT_DIR$/mindQuery.py" />
       </list>
     </option>
   </component>
@@ -310,7 +304,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mindQuery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
+        <state relative-caret-position="531">
           <caret line="48" column="96" lean-forward="true" selection-start-line="48" selection-start-column="96" selection-end-line="48" selection-end-column="96" />
           <folding>
             <element signature="e#173#186#0" expanded="true" />
