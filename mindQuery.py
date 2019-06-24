@@ -17,9 +17,9 @@ from docsAPIWrite import writeToDoc
 
 # global vars -----------------------------
 DOCUMENT_ID_QUERY = '1MdJ4btEMOOOeLpcWT3-Vah826EnutaoodvHlJvISXpI'
-NON_SEARCH_WORDS = ['the', 'is']
+NON_SEARCH_WORDS = ['the', 'is', 'in']
 RETURN_PHRASE_BUILDERS = ['who', 'what', 'how', 'when', 'where', 'why', 'do', 'i', 'you', 'he', 'my',
-                          'would', 'they', 'will', 'have']
+                          'would', 'they', 'will', 'did', 'this']
 RETURN_PHRASE_BUILDER_TYPES = {'who': 'string', 'when': 'datetime'}
 # above is for use in V2 - where the program will come up with an intelligent response
 # - not just spit out an answer
@@ -57,12 +57,6 @@ def main():
             # edit this to be a for loop
             # create a running total of how many characters appear before the location of insert
             queryLengths[0] += len(dataToWrite[0]) + 1
-            results2 = writeToDoc(queryLengths[0] + queryLengths[1], dataToWrite[1])
-            queryLengths[1] += len(dataToWrite[1]) + 1
-            results3 = writeToDoc(queryLengths[0] + queryLengths[1] + queryLengths[2], dataToWrite[2])
-            queryLengths[2] += len(dataToWrite[2]) + 1
-            results4 = writeToDoc(queryLengths[0] + queryLengths[1] + queryLengths[2] + queryLengths[3],
-                                  dataToWrite[3])
             print(queryLengths)
     print('\n*****************************')
 
