@@ -19,7 +19,7 @@ from docsAPIWrite import writeToDoc
 DOCUMENT_ID_QUERY = '1MdJ4btEMOOOeLpcWT3-Vah826EnutaoodvHlJvISXpI'
 NON_SEARCH_WORDS = ['the', 'is', 'in']
 RETURN_PHRASE_BUILDERS = ['who', 'what', 'how', 'when', 'where', 'why', 'do', 'i', 'you', 'he', 'my',
-                          'would', 'they', 'will', 'did', 'this']
+                          'would', 'they', 'will', 'did', 'this', 'was']
 RETURN_PHRASE_BUILDER_TYPES = {'who': 'string', 'when': 'datetime'}
 # above is for use in V2 - where the program will come up with an intelligent response
 # - not just spit out an answer
@@ -53,11 +53,13 @@ def main():
             print(PATTERN_MATCH_DICT)
             dataToWrite = getWriteData(PATTERN_MATCH_DICT)  # get the data to write out (output)
             dataToWrite = [' - ' + data for data in dataToWrite]
-            results = writeToDoc(queryLengths[0], dataToWrite[0])
-            # edit this to be a for loop
-            # create a running total of how many characters appear before the location of insert
-            queryLengths[0] += len(dataToWrite[0]) + 1
-            print(queryLengths)
+            runningTotal = queryLengths[0]  # keep a running total of chars in output file
+            for i in range(0, len(dataToWrite)):  # for every item in dataToWrite - write it
+                results = writeToDoc(runningTotal, dataToWrite[i])
+                runningTotal += len(dataToWrite[i]) + 1  # add amount of new written data
+                if i < len(dataToWrite) - 1:
+                    runningTotal += queryLengths[i+1]
+            print(results)
     print('\n*****************************')
 
 
