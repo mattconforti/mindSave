@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c36078f2-f76f-41a0-91e0-ee2bc31c9948" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/mindQuery.py" beforeDir="false" afterPath="$PROJECT_DIR$/mindQuery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mindSaveDb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mindSaveDb.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/token.pickle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mindQuery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+            <state relative-caret-position="807">
+              <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
               <folding>
                 <element signature="e#173#186#0" expanded="true" />
               </folding>
@@ -321,8 +319,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mindQuery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+        <state relative-caret-position="807">
+          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
           <folding>
             <element signature="e#173#186#0" expanded="true" />
           </folding>
