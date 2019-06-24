@@ -28,9 +28,11 @@ PATTERN_MATCH_DICT = {}  # which thoughts match our patterns - need duplicate ke
 def main():
     print('\n*****************************\n')
     queryList = getData(DOCUMENT_ID_QUERY)
+    queryLengths = []  # how many characters are each of our queries? - adds length of answer after
     searchPatterns = []
     for query in queryList:
         if query != '':  # skip blank lines
+            queryLengths.append(len(query) + 1)  # + 1 to account for extra spacing needed
             print('Query: ', query)
             searchPattern = createSearchPattern(query)
             print('Search Pattern: ', searchPattern, '\n')
@@ -48,8 +50,17 @@ def main():
             print('Search results:\n')
             print(PATTERN_MATCH_DICT)
             dataToWrite = getWriteData(PATTERN_MATCH_DICT)  # get the data to write out (output)
-            writeResults = writeToDoc(len(dataToWrite[0]), dataToWrite[0])
-            print(writeResults)
+            results = writeToDoc(queryLengths[0], dataToWrite[0])
+            # edit this to be a for loop
+            # create a running total of how many characters appear before the location of insert
+            queryLengths[0] += len(dataToWrite[0]) + 1
+            results2 = writeToDoc(queryLengths[0] + queryLengths[1], dataToWrite[1])
+            queryLengths[1] += len(dataToWrite[1]) + 1
+            results3 = writeToDoc(queryLengths[0] + queryLengths[1] + queryLengths[2], dataToWrite[2])
+            queryLengths[2] += len(dataToWrite[2]) + 1
+            results4 = writeToDoc(queryLengths[0] + queryLengths[1] + queryLengths[2] + queryLengths[3],
+                                  dataToWrite[3])
+            print(queryLengths)
     print('\n*****************************')
 
 
