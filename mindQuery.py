@@ -19,8 +19,10 @@ from docsAPIWrite import writeToDoc
 DOCUMENT_ID_QUERY = '1MdJ4btEMOOOeLpcWT3-Vah826EnutaoodvHlJvISXpI'
 NON_SEARCH_WORDS = ['the', 'is']
 RETURN_PHRASE_BUILDERS = ['who', 'what', 'how', 'when', 'where', 'why', 'do', 'i', 'you', 'he', 'my',
-                          'would', 'they']
+                          'would', 'they', 'will', 'have']
 RETURN_PHRASE_BUILDER_TYPES = {'who': 'string', 'when': 'datetime'}
+# above is for use in V2 - where the program will come up with an intelligent response
+# - not just spit out an answer
 PATTERN_MATCH_DICT = {}  # which thoughts match our patterns - need duplicate keys
 
 
@@ -50,6 +52,7 @@ def main():
             print('Search results:\n')
             print(PATTERN_MATCH_DICT)
             dataToWrite = getWriteData(PATTERN_MATCH_DICT)  # get the data to write out (output)
+            dataToWrite = [' - ' + data for data in dataToWrite]
             results = writeToDoc(queryLengths[0], dataToWrite[0])
             # edit this to be a for loop
             # create a running total of how many characters appear before the location of insert
@@ -98,7 +101,7 @@ def createSearchPattern(queryString):
             if word not in RETURN_PHRASE_BUILDERS:
                 searchWords.append(word)
     for w in searchWords:
-        if w == searchWords[-1]:  # if the search word is the last in the list - no '|'
+        if w == searchWords[-1]:  # if the search word is the last in the list, no '|'
             regExPattern += w
         else:
             regExPattern += w + '|'
